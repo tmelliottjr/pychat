@@ -6,7 +6,8 @@ cache = MemcachedCache(['127.0.0.1:11211'])
 
 @app.route('/connections', methods=['GET'])
 def connections():
-  return jsonify(get_verified_connections()), 200
+  return "str"
+  #return jsonify(get_verified_connections()), 200
 
 
 @socketio.on('disconnect')
