@@ -2,6 +2,7 @@ import json
 from flask import request, jsonify
 from app import app, socketio, emit, join_room
 from werkzeug.contrib.cache import MemcachedCache
+from flask_cors import cross_origin
 cache = MemcachedCache(['127.0.0.1:11211'])
 
 @app.route('/connections', methods=['GET'])
