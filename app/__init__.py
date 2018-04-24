@@ -5,7 +5,7 @@ from config import Config
 
 app = Flask(__name__)
 
-CORS(app)
+#CORS(app)
 socketio = SocketIO(app)
 socketio.rooms = rooms
 

@@ -5,6 +5,7 @@ from werkzeug.contrib.cache import MemcachedCache
 cache = MemcachedCache(['127.0.0.1:11211'])
 
 @app.route('/connections', methods=['GET'])
+@cross_origin()
 def connections():
   return jsonify(get_verified_connections()), 200
 
